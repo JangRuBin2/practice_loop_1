@@ -10,12 +10,17 @@
   <div id="root"></div>
   <script>
     let root = document.getElementById("root");
-    for(i=1; i<10; i++) {
-      let gugu = document.createElement("div");
-      gugu.textContent = (2*i);
-      root.appendChild(gugu);
-      console.log(2*i);
-    };
+    let people = ["장루빈", "김은아", "김동주"];
+
+    for(i=2; i<10; i++) {
+      for(a=1; a<10; a++) {
+        console.log(i+"*"+a+"="+(i*a));
+        let gop = document.createElement("div");
+        gop.textContent=(i+"*"+a+"="+(i*a));
+        root.appendChild(gop);
+        
+      }
+    }
   </script>
 </body>
   
