@@ -30,6 +30,11 @@
       // img.innerHTML = _PokeData.results[0].;
     //  console.dir(_PokeData.results.length) 모든 포켓몬의 이름에 접근 한다
       root.appendChild(img);
+      img.addEventListener('click',function() {
+        root.removeChild(this)
+      })
+      // 이미지 클릭하면 root의 자식요소 삭제
+      
       // const randomNum = math.random() * 1281
       // const randomPokeFloor = math.floor(randomNum)
      
