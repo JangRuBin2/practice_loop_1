@@ -17,7 +17,7 @@
 
 
 
-let merry = { race: "hobbit", name: "Merry Brandybuck" }
-let pippin = {race: "hobbit", name: "Pippin Took", bestfriend: merry }
-console.log(JSON.stringify(pippin.bestfriend.name));
+// let merry = { race: "hobbit", name: "Merry Brandybuck" }
+// let pippin = {race: "hobbit", name: "Pippin Took", bestfriend: merry }
+// console.log(JSON.stringify(pippin.bestfriend.name));
 

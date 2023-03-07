@@ -8,21 +8,35 @@
 </head>
 <body>
   <div id="root"></div>
+  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="" srcset="">
   <script>
     const root = document.getElementById('root');
-    
+    // https://ko.javascript.info/json
     const xhr = new XMLHttpRequest();
-    const _URL = 'https://pokeapi.co/api/v2/pokemon/ditto';
+    const _URL = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0';
     xhr.open('GET', _URL);
     xhr.send();
     xhr.addEventListener('load', function() {
       console.log(xhr.response);
       const _PokeData = JSON.parse(xhr.response);
-      const h1 = document.createElement('h1');
-      h1.textContent = _PokeData.name;
-      root.appendChild(h1);
+      const div = document.createElement('div');
+      // div.innerHTML = _PokeData["results"]; 1281마리 포켓몬 데이터
+      // console.dir(_PokeData["results"])
+      
+      div.innerHTML = _PokeData.results[0].name;
+    //  console.dir(_PokeData.results.length) 모든 포켓몬의 이름에 접근 한다
+      root.appendChild(div);
+      // const randomNum = math.random() * 1281
+      // const randomPokeFloor = math.floor(randomNum)
+     
+      for(let i=0; i<_PokeData.results.length; i++) {
+        console.log(_PokeData.results[i].name)
+      };
     });
+  
     // 포켓몬 ditto의 api를 url을 통해 get방식으로 열고 해당 포켓몬 json데이터를 parse()를 통해 객체화 시켜주고 그것의 name값을 텍스트로 출력하는 과정
+
+    
   </script>
 </body>
 </html>
