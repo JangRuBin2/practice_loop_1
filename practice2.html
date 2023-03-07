@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    let myChampions = [
+      "람머스",
+      "이즈리얼",
+      "라이즈",
+      "유미"
+    ];
+
+    // 내가 좋아하는 영웅들 출력
+    let root = document.getElementById('root');
+    for(let i=0; i<myChampions.length; i++) {
+      let h1 = document.createElement('h1');
+      h1.textContent = myChampions[i];
+      root.appendChild(h1);
+    };
+    // 포지션에 따른 영웅 출력 해보자
+    let myChampionList = {
+      ADC : ["이즈리얼","베인","카이사"],
+      MID : ["아리","라이즈","애니비아"],
+      SUP : ["블리츠크랭크","잔나","소나"]
+    };
+    // 확인해보니 object 형태
+    // console.dir(myChampionList.ADC);
+    // 각 배열에 접근하기 위해 변수 선언
+    // let ADList = myChampionList.ADC;
+    // let MIDList = myChampionList.MID;
+    // let SUP = myChampionList.SUP;
+    // 확인 했으니 for문 돌리자
+    // console.log(myChampionList[key[i]]);
+    // for in 문을 활용해서 object의 key값을 cham이라는 변수안에 넣었고 임의의 배열을 만들어서 key값을 배열에 넣었다.
+a.style[jp[]]
+   
+    
+    let championType = [];
+    for(cham in myChampionList) {
+      championType.push(cham);
+      // 이러면 챔피언 타입까지는 접근이 된 거
+      // console.log(championType[0])
+      for(let j=0; j<3; j++) {
+        console.log(myChampionList[championType[0]][0])
+        console.log(championType[j]);
+      }
+      
+    }
+    // for(let a=0; a<ADList.length; a++) {
+    //   let h2 = document.createElement('h2');
+    //   h2.textContent = ADList[a]
+    //   root.appendChild(h2);
+    //   if(h2)
+    // }
+    
+    
+
+
+    // for(let i=0; i<; i++) {
+    //   let h1 = document.createElement('h1');
+    //   h1.textContent = myChampions[i];
+    //   root.appendChild(h1);
+    // }
+
+    
+  </script>
+</body>
+</html>
